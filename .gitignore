@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.autofluent-gui/
+workspace/
+*.log
+*.trn
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+server-info*.txt
+*server-info*.json

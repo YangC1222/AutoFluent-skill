@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 可视化操作"
+  short_description: "通过 Codex 操作 Fluent 2023 R1，并在原生窗口实时查看计算"
+  default_prompt: "使用 $autofluent-gui 打开可见的 Fluent 2023 R1 窗口，连接 AutoFluent 并检查当前算例。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "Local AutoFluent MCP for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true
