@@ -26,4 +26,4 @@ In Fluent solver mode, use **File → Applications → Server → Start** to sav
 - MCP capacity reached: identify existing sessions and unsaved work. Disconnect an unused borrowed session only when authorized; do not terminate another simulation.
 - Stale server-info: the associated Fluent process may have closed. Do not overwrite an old credential file; start a new run directory or reconnect to a live GUI.
 - Read-only GUI viewing can coexist with calculation. Parameter editing, initialization and case loading must be coordinated with MCP jobs.
-- For screenshots or native contour display, use available scoped capture/render capabilities. Original AutoFluent only exports scalar CSV and has no screenshot/video tool. Do not advertise an embedded live viewer.
+- For screenshots or native contour display, use available scoped capture/render capabilities. AutoFluent 0.2 adds native PNG export through fluent_render_contour. Reconnect MCP after upgrading and verify 28 tools. There is no video streaming tool. Do not advertise an embedded live viewer.

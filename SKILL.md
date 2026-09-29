@@ -1,6 +1,6 @@
 ---
 name: autofluent-gui
-description: Operate local Ansys Fluent 2023 R1 through AutoFluent MCP with a visible native Fluent window. Use for opening Fluent interactively, importing cases, changing simulation settings, monitoring iterations, and exporting results while the user can inspect the same solver session.
+description: Operate local Ansys Fluent 2023 R1 through AutoFluent MCP with a visible native Fluent window. Use for opening Fluent interactively, importing cases, changing simulation settings, rendering native contours, running resumable pipe velocity studies, checking convergence, and exporting Excel/theory comparisons while the user can inspect the same solver session.
 ---
 
 # AutoFluent GUI
@@ -28,8 +28,12 @@ Use the `autofluent` MCP server for solver operations and this skill's launcher 
 - Loading case/data changes the visible session. Initialization resets the solution. Account for unsaved changes before either action; reusing a saved case does not require initialization for postprocessing.
 - Every operation returning `job_id` must complete before another operation on that session. Monitor with `fluent_job_status` and `fluent_logs`. Cancellation takes effect between iteration chunks.
 - Job success is not convergence: inspect residual trends, mass/energy balance, and relevant monitored quantities. Report which checks were actually performed.
-- The user can rotate/zoom the mesh, inspect settings and use Fluent's native plotting controls. Do not promise that API mutations automatically open or refresh every GUI panel. Rendering commands are not exposed by the original 24-tool MCP; use native GUI controls or develop an explicitly scoped adapter when needed.
+- The user can rotate/zoom the mesh, inspect settings and use Fluent's native plotting controls. Do not promise that API mutations automatically open or refresh every GUI panel. AutoFluent 0.2 exposes native contour rendering; verify the four workflow tools are available before using them.
 - Export requested results through supported tools. Identify plane coordinates, vector component versus magnitude, units, averaging definitions, and any interpolation. Saved images are snapshots, not live interactive views.
+
+## Native plotting and pipe studies
+
+Read [references/workflows.md](references/workflows.md) for native contours, resumable velocity sweeps, combined convergence checks, and nine-column Excel/theory exports. Use these MCP workflows for matching requests. Confirm boundaries, material properties, heating assumptions and dimensions from the actual model. Defaults are examples, not inferred physics. Check the returned convergence flag.
 
 ## Credential and output handling
 

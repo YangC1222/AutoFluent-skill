@@ -35,3 +35,7 @@ Copy-Item -Path '.\AutoFluent-skill\SKILL.md', '.\AutoFluent-skill\agents', '.\A
 - GUI 在启动脚本结束后继续运行。MCP 对这个会话的关闭操作仅断开连接；保存结果后可从 Fluent 窗口正常退出。
 
 脚本支持 `--check`，仅检查环境，不占许可证。详细使用方式见 [setup](references/setup.md)。
+
+## 新增四项能力
+
+需要 AutoFluent MCP 0.2.0（28 个工具）：原生云图控制、可恢复批量管流工况、联合收敛检查、九列 Excel 与理论比较图。参数和限制见 [工作流指南](references/workflows.md)。

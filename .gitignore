@@ -11,3 +11,7 @@ workspace/
 *.dat.h5
 server-info*.txt
 *server-info*.json
+
+# Local GraphFlow database
+graphflow-out/
+.graphflow-cache/
