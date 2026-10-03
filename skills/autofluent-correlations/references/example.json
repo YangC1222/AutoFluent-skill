@@ -1,0 +1,15 @@
+{
+  "directory": "theory/run-01",
+  "spec": {
+    "reynolds": 150000,
+    "prandtl": 6.97,
+    "diameter": 0.01,
+    "conductivity": 0.6,
+    "length": 1,
+    "smooth": true,
+    "hydrodynamically_developed": true,
+    "thermally_developed": true,
+    "boundary": "constant_heat_flux",
+    "heating": true
+  }
+}

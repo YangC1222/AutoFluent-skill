@@ -39,3 +39,28 @@ Copy-Item -Path '.\AutoFluent-skill\SKILL.md', '.\AutoFluent-skill\agents', '.\A
 ## 新增四项能力
 
 需要 AutoFluent MCP 0.2.0（28 个工具）：原生云图控制、可恢复批量管流工况、联合收敛检查、九列 Excel 与理论比较图。参数和限制见 [工作流指南](references/workflows.md)。
+
+## 八个独立工程 skills（MCP 0.3.0）
+
+| Skill | 功能 |
+| --- | --- |
+| [autofluent-preflight](skills/autofluent-preflight) | 网格、单位、材料、边界和模型预检查 |
+| [autofluent-axial-heat](skills/autofluent-axial-heat) | 自动截面/壁面分段，局部 Tw/Tb/h/Nu 曲线 |
+| [autofluent-pressure](skills/autofluent-pressure) | 静压差、总压损失、摩擦因子、泵功和可选 PEC |
+| [autofluent-grid-study](skills/autofluent-grid-study) | 三套已有网格的求解编排、对比和适用条件内 GCI |
+| [autofluent-correlations](skills/autofluent-correlations) | Dittus–Boelter、Gnielinski、层流、Hausen 及适用性 |
+| [autofluent-monitor](skills/autofluent-monitor) | 本机监控页面、趋势、日志、取消及下载 |
+| [autofluent-sweep](skills/autofluent-sweep) | 边界/恒物性参数的笛卡尔组合扫描和恢复 |
+| [autofluent-report](skills/autofluent-report) | 有来源记录的 Word/PDF 与完整证据附件 |
+
+保持根目录 autofluent-gui 的原安装方式不变。安装新增八项：
+
+```powershell
+python scripts/install_skills.py
+```
+
+默认安装至 `$CODEX_HOME/skills` 或 `~/.codex/skills`；已有目录会拒绝覆盖，检查后用 `--replace` 更新。每项可独立安装，其 SKILL.md 和 references/example.json 包含实际 MCP 参数。全部依赖 AutoFluent MCP 0.3.0；图表及报告需其 `[reports]` 可选依赖。
+
+示例：`使用 $autofluent-axial-heat 对已收敛 pipe 算例输出五个轴向位置的局部换热曲线。`
+
+限制：GCI 需真实三套可比网格，不会凭空生成；多参数求解当前针对恒物性稳态加热管流，几何扫描需要分别重划网格。监控页面是独立本机网页，不是 Fluent GUI 视频。更多验证见 MCP 仓库 docs/engineering.md。

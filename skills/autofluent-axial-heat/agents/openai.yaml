@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 轴向局部换热"
+  short_description: "and Nu from Fluent cross sections and wall bands. 用于沿程局部换热分析"
+  default_prompt: "使用 $autofluent-axial-heat 完成轴向局部换热，检查输入并保留结果与验证证据。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "AutoFluent MCP 0.3.0 for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true

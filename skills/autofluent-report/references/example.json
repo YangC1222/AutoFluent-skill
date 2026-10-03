@@ -1,0 +1,12 @@
+{
+  "sources": [
+    "checks/pipe-01/result.json",
+    "axial/run-01/result.json",
+    "pressure/run-01/result.json"
+  ],
+  "directory": "reports/run-01",
+  "title": "Pipe flow and heat transfer assessment",
+  "notes": [
+    "Check mesh independence before publication."
+  ]
+}

@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 理论关联式比较"
+  short_description: "it validity reasons. 用于 Dittus–Boelter Gnielinski 层流与入口段理论比较"
+  default_prompt: "使用 $autofluent-correlations 完成理论关联式比较，检查输入并保留结果与验证证据。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "AutoFluent MCP 0.3.0 for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true

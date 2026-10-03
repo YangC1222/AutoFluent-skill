@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 多参数扫描"
+  short_description: "nditions and constant material properties. 用于速度热流入口温度物性多参数扫描"
+  default_prompt: "使用 $autofluent-sweep 完成多参数扫描，检查输入并保留结果与验证证据。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "AutoFluent MCP 0.3.0 for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true

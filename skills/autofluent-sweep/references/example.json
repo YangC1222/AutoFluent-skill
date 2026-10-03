@@ -1,0 +1,31 @@
+{
+  "session_id": "SESSION",
+  "directory": "sweeps/run-01",
+  "spec": {
+    "base_case": "pipe.cas",
+    "axes": [
+      {
+        "name": "velocity",
+        "path": [
+          "setup",
+          "boundary_conditions",
+          "velocity_inlet",
+          "inlet",
+          "vmag",
+          "value"
+        ],
+        "values": [
+          13,
+          15
+        ]
+      }
+    ],
+    "pipe": {
+      "diameter": 0.01,
+      "heated_length": 1
+    },
+    "criteria": {
+      "max_iterations": 1000
+    }
+  }
+}

@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 自动仿真报告"
+  short_description: " convergence results plots and theory analyses. 用于整理可追溯的仿真报告"
+  default_prompt: "使用 $autofluent-report 完成自动仿真报告，检查输入并保留结果与验证证据。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "AutoFluent MCP 0.3.0 for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true

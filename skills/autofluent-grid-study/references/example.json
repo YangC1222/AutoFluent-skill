@@ -1,0 +1,32 @@
+{
+  "directory": "grid/comparison-01",
+  "spec": {
+    "comparable": true,
+    "levels": [
+      {
+        "label": "fine",
+        "spacing": 1,
+        "values": {
+          "benchmark": 1.01
+        },
+        "converged": true
+      },
+      {
+        "label": "medium",
+        "spacing": 2,
+        "values": {
+          "benchmark": 1.04
+        },
+        "converged": true
+      },
+      {
+        "label": "coarse",
+        "spacing": 4,
+        "values": {
+          "benchmark": 1.16
+        },
+        "converged": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+interface:
+  display_name: "AutoFluent 算例预检查"
+  short_description: "s and wall treatment before solving. 用于 Fluent 算例预检查和设置一致性检查"
+  default_prompt: "使用 $autofluent-preflight 完成算例预检查，检查输入并保留结果与验证证据。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "autofluent"
+      description: "AutoFluent MCP 0.3.0 for Fluent 2023 R1"
+policy:
+  allow_implicit_invocation: true

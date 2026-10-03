@@ -1,0 +1,16 @@
+{
+  "session_id": "SESSION",
+  "directory": "checks/pipe-01",
+  "spec": {
+    "inlet": "inlet",
+    "outlet": "outlet",
+    "expected_length_m": 1,
+    "axial_direction": "y",
+    "expected_materials": {
+      "water-liquid": {
+        "density": 1000,
+        "viscosity": 0.001
+      }
+    }
+  }
+}
