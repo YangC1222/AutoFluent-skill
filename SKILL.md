@@ -40,3 +40,11 @@ Read [references/workflows.md](references/workflows.md) for native contours, res
 Server-info files contain a local connection password. Keep them in the workspace's `.autofluent-gui/` directory; never print, commit, or paste their contents. Only the path belongs in tool calls or user messages. Public repositories must exclude runtime directories and CFD case/data files.
 
 Report the actual state: GUI requested versus confirmed visible, MCP connection success, current loaded case, and whether a restart/new chat is needed for skill discovery. Do not claim the Fluent GUI is inside Codex.
+
+## Meshing preference — structured first
+
+For every new mesh or remeshing task, first assess structured meshing feasibility from the actual geometry and topology. Prefer mapped quadrilateral meshes in 2D and mapped/swept or multiblock hexahedral meshes in 3D when feasible. Consider reasonable partitioning, sweep source/target compatibility and pipe O-grid/block layouts before abandoning the structured route. Verify mesh quality and near-wall resolution; do not force a poor structured mesh merely to satisfy the preference.
+
+Use another method only after identifying why the structured approach is unsuitable or unavailable. State the specific geometric/topological, quality or tooling limitation, then select a suitable alternative (for example local structured blocks with an unstructured remainder, or prism layers with tetrahedral/polyhedral cells). Preserve structured regions where practical. A missing tool is a tooling limitation, not proof that the geometry cannot be structured; do not silently default to tetrahedral/polyhedral/hexcore methods. Do not call an all-hexahedral, hex-dominant or hexcore mesh structured without confirming its topology.
+
+Record the feasibility assessment, selected method, any fallback reason and quality checks in the mesh result/report. Apply this preference to every newly meshed geometry variant and all grid-study levels; keep refinement topology/method consistent where possible. Reading or postprocessing an existing mesh alone does not authorize replacing it. A later explicit user choice overrides this default.
