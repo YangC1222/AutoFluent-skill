@@ -68,3 +68,9 @@ python scripts/install_skills.py
 ## 划网格默认要求
 
 每次新建或重划网格，先评估映射、扫掠和分块结构化方案；可行时优先使用结构化网格。只有几何拓扑、质量或现有工具条件不适用时，才采用其他方法，并记录原因。网格无关性分析和几何参数扫描同样遵守。只读取已有网格不会自动触发重划。
+
+## 方案前澄清 skill
+
+新增 [workflow-plan-clarify](skills/workflow-plan-clarify)：制定整套流程前，及时询问会影响方案的未知项，与用户确定物理假设、实施路线、验证和交付要求。已明确事项不重复询问，必要答案未获得前不执行依赖它的步骤。
+
+目前共 10 个 skills：根目录 autofluent-gui，skills/ 下八个工程 skills 和一个方案澄清 skill。`python scripts/install_skills.py` 会发现并安装 skills/ 下全部九项；更新已有安装使用 `--replace`。方案澄清已写入 AutoFluent 各项操作指引。

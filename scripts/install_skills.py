@@ -1,4 +1,4 @@
-"""Install the eight packaged skills without copying runtime data."""
+"""Install the packaged skills without copying runtime data."""
 
 import argparse
 import os
@@ -16,8 +16,8 @@ def main():
         args.destination or Path(os.getenv("CODEX_HOME", Path.home() / ".codex")) / "skills"
     )
     sources = sorted(p for p in (repository / "skills").iterdir() if (p / "SKILL.md").is_file())
-    if len(sources) != 8:
-        raise RuntimeError("Expected eight packaged skills")
+    if not sources:
+        raise RuntimeError("No packaged skills found")
     for source in sources:
         if (destination / source.name).exists() and not args.replace:
             raise FileExistsError(f"Inspect existing skill before --replace: {source.name}")

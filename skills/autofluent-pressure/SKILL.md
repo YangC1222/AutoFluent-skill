@@ -18,3 +18,7 @@ Call fluent_pressure_performance on a converged solution. Supply inlet/outlet sa
 The tool area-averages static pressure, mass-averages total pressure, and obtains inlet mass flow and area. U=mdot/(rho A), Darcy f=dp_static D/(L rho U²/2), Fanning f=Darcy/4. Hydraulic power=(pt_in-pt_out)Q; it excludes pump efficiency. Negative drops remain signed evidence, not silently made positive.
 
 PEC is optional: provide nu, reference_nu, reference_darcy and comparable_reference=true only when baseline geometry, definitions and comparison basis justify PEC=(Nu/Nu0)/(f/f0)^(1/3). This convention does not prove equal-pumping-power equivalence for arbitrary geometries. Missing baseline yields null PEC. Report averaging and pressure definitions with units.
+
+## Clarify the workflow before choosing a plan
+
+Before proposing or materially changing an end-to-end workflow, check the user's existing instructions and inspect available inputs. Promptly ask about unresolved facts or choices that change the physics, method, cost, validation or deliverables. Use workflow-plan-clarify when available. Ask only the relevant missing questions, offer reasoned alternatives, and wait for required answers before dependent work; continue independent checks meanwhile. Do not re-ask settled questions or impose an extra approval step when the plan is already clear.

@@ -18,3 +18,7 @@ Call fluent_dashboard(action="start") and open the returned local URL. The page 
 The page binds only 127.0.0.1 and uses a random URL token. Keep its URL local. It can cancel eligible jobs cooperatively after their current chunk; it cannot force-stop native file operations or edit solver physics. Cancel only the user's intended job. fluent_dashboard(action="stop") stops the page server without closing Fluent.
 
 Keep the hosting MCP process running. The dashboard sees only that process's sessions/jobs, not calculations in another MCP or Python process. Use Fluent's native GUI for geometry interaction; this dashboard is not a screen stream. Native results downloads are restricted to generated artifact paths within workspace.
+
+## Clarify the workflow before choosing a plan
+
+Before proposing or materially changing an end-to-end workflow, check the user's existing instructions and inspect available inputs. Promptly ask about unresolved facts or choices that change the physics, method, cost, validation or deliverables. Use workflow-plan-clarify when available. Ask only the relevant missing questions, offer reasoned alternatives, and wait for required answers before dependent work; continue independent checks meanwhile. Do not re-ask settled questions or impose an extra approval step when the plan is already clear.

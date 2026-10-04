@@ -1,0 +1,6 @@
+interface:
+  display_name: "方案前澄清与确认"
+  short_description: "制定整套工程流程前及时澄清关键未知项，与用户确定合适的实施方案"
+  default_prompt: "使用 $workflow-plan-clarify 检查这项任务的整套流程，先问清会影响方案的关键问题，再确定合适的实施方案。"
+policy:
+  allow_implicit_invocation: true

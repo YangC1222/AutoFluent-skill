@@ -20,3 +20,7 @@ Call fluent_engineering_report with sources (1..10 workspace-relative JSON files
 Include mesh/model/convergence evidence when available, state physical assumptions and comparison limitations in notes, and identify which requested checks remain absent. The exporter includes axial.png beside an axial result. It produces editable report.docx, report.pdf and evidence.json. Avoid including credential files or unrelated personal paths as sources.
 
 Render the DOCX with the available document renderer and inspect every page; render the PDF and inspect every page too. Correct clipping, unsupported glyphs or broken tables before delivery. If a renderer is unavailable, state that limitation instead of calling the report visually verified. Generated results are engineering evidence summaries, not certified validation reports.
+
+## Clarify the workflow before choosing a plan
+
+Before proposing or materially changing an end-to-end workflow, check the user's existing instructions and inspect available inputs. Promptly ask about unresolved facts or choices that change the physics, method, cost, validation or deliverables. Use workflow-plan-clarify when available. Ask only the relevant missing questions, offer reasoned alternatives, and wait for required answers before dependent work; continue independent checks meanwhile. Do not re-ask settled questions or impose an extra approval step when the plan is already clear.

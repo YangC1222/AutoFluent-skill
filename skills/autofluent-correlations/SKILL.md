@@ -18,3 +18,7 @@ Call fluent_heat_transfer_correlations; no solver is required. Derive Re and Pr 
 The tool returns Dittus-Boelter, Gnielinski, fully developed laminar and Hausen mean thermal-entry results. Inapplicable entries return null Nu/h and specific reasons. Hausen is for hydrodynamically developed laminar constant-wall-temperature flow; fully developed laminar values differ between constant Tw and constant heat flux. Transitional flow is uncertain even when inside a broad empirical range. Constant-property smooth circular-tube assumptions exclude roughness, noncircular passages and large property changes.
 
 Compare like definitions: local versus length-mean h/Nu and consistent reference properties. Quote the returned formulas and sources. These empirical references are not exact theoretical solutions. Use the existing Excel workflow for the original nine-column request; do not label its Dittus-Boelter-only output as containing all four correlations.
+
+## Clarify the workflow before choosing a plan
+
+Before proposing or materially changing an end-to-end workflow, check the user's existing instructions and inspect available inputs. Promptly ask about unresolved facts or choices that change the physics, method, cost, validation or deliverables. Use workflow-plan-clarify when available. Ask only the relevant missing questions, offer reasoned alternatives, and wait for required answers before dependent work; continue independent checks meanwhile. Do not re-ask settled questions or impose an extra approval step when the plan is already clear.

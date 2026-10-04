@@ -20,3 +20,7 @@ Automatic planes cut the whole domain: use existing fluid-only cross sections fo
 Tw uses Wall Temperature, not Static Temperature on clipped surfaces. Tb uses mass-averaged fluid temperature. q uses the heat-flux field and explicit heat_into_fluid_sign (1 or -1); check the sign against the original wall heat-transfer report, never infer it from desired h. h=q/(Tw-Tb), Nu=hD/k. Null/invalid rows indicate inconsistent sign, tiny temperature difference or invalid area. Do not replace them with zero.
 
 Deliver CSV/JSON plus PNG/SVG/PDF plots; install MCP reports extra if plot_error reports missing dependencies. Inspect plots and table values. These are wall-band means, not pointwise wall coefficients; variable cp requires enthalpy-based bulk temperature outside this workflow.
+
+## Clarify the workflow before choosing a plan
+
+Before proposing or materially changing an end-to-end workflow, check the user's existing instructions and inspect available inputs. Promptly ask about unresolved facts or choices that change the physics, method, cost, validation or deliverables. Use workflow-plan-clarify when available. Ask only the relevant missing questions, offer reasoned alternatives, and wait for required answers before dependent work; continue independent checks meanwhile. Do not re-ask settled questions or impose an extra approval step when the plan is already clear.
